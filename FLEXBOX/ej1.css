@@ -1,0 +1,16 @@
+#primera_seccion{
+    color:red;
+    background-color: yellow;
+    width: 200px;
+    left: 100px;
+    top: 100px;
+    opacity: 1;
+   margin: 100px 50px;
+    float: left;
+}
+#segunda_seccion{
+    color:blue;
+    background-color: greenyellow;
+    width:300px;
+    height: 100px;
+}

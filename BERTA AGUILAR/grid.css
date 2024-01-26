@@ -1,0 +1,32 @@
+html {
+    display: flex;
+    flex-direction: column;
+  }
+
+body {
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh; 
+    margin: 0;
+      background:#eee;
+      color: #434344;
+      font-family: Poppins;
+      font-size: 1.1em;
+  } 
+  img {
+    float: right;
+    margin-top: 1.1vw;
+    margin-right:2vw;
+    border-radius: 30px;
+    max-width: 100%;
+    border: 5px ;
+  }
+
+  footer {
+    background: #0d6427;
+    text-align: center;
+    border-radius: 1.25rem;
+    color: #eee;
+  }
+
+  

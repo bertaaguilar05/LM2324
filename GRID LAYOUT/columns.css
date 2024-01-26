@@ -1,0 +1,25 @@
+body {
+    background-color: antiquewhite;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.todas-las-cajas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: lightgreen;
+    border: 1px solid black;
+}
+
+.caja{
+    background-color: lightgray;
+    border: 4px solid black;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
