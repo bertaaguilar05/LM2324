@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificaciones</title>
+    <script src="calificaciones.js"></script>
+</head>
+<body>
+<h1>Introduce las calificaciones del alumno</h1>
+<form id="calificaciones-form">
+        <label for="calificacion">Calificación:</label>
+        <input type="number" id="calificacion" name="calificacion" min="0" max="10" required>
+        <button type="button" id="agregar-calificacion">Agregar calificación</button>
+        <button type="button" id="borrar-calificaciones">Borrar calificaciones</button>
+        <button type="button" id="calcular-media">Calcular nota media</button>
+</form>
+    <h2 id="media-label">Nota media:</h2>
+    <p id="media-value"></p>
+    <script src="calificaciones.js"></script>
+</body>
+</html>
