@@ -10,6 +10,11 @@
     <button onclick="guardar()">Guardar</button>
     <button onclick="borrar()">Borrar</button>
     <script>
+        function cargarPagina(){
+            let valor=localStorage.getItem("informacion")
+            if (valor!=null)
+                alert("Bienvenido "+valor);
+        }
         function guardar() {
             let info = document.getElementById("info").value;
             localStorage.setItem("informacion",info);
@@ -17,6 +22,7 @@
         function borrar(){
             localStorage.clear()
         }
+        windows.onload = cargarPagina();
     </script>
 
 </body>
