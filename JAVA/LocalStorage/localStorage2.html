@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de Tema</title>
+    <style>
+        .tema-claro {
+            background-color: white;
+            color: black;
+        }
+        .tema-oscuro {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body id="contenido">
+    <h1>Cambio de Tema</h1>
+    <button id="tema-claro">Tema claro</button>
+    <button id="tema-oscuro">Tema oscuro</button>
+
+    <script>
+        const temaClaro = document.getElementById('tema-claro');
+        const temaOscuro = document.getElementById('tema-oscuro');
+        const contenido = document.getElementById('contenido');
+
+        // Comprobar si ya existe un tema guardado en localStorage
+        if (localStorage.getItem('tema')) {
+            if (localStorage.getItem('tema') === 'claro') {
+                contenido.classList.add('tema-claro');
+                temaClaro.classList.add('seleccionado');
+            } else {
+                contenido.classList.add('tema-oscuro');
+                temaOscuro.classList.add('seleccionado');
+            }
+        } else {
+            contenido.classList.add('tema-claro');
+            temaClaro.classList.add('seleccionado');
+        }
+
+        // Cambiar el tema al hacer clic en los botones
+        temaClaro.addEventListener('click', () => {
+            contenido.classList.remove('tema-oscuro');
+            contenido.classList.add('tema-claro');
+            localStorage.setItem('tema', 'claro');
+            temaClaro.classList.add('seleccionado');
+            temaOscuro.classList.remove('seleccionado');
+        });
+
+        temaOscuro.addEventListener('click', () => {
+            contenido.classList.remove('tema-claro');
+            contenido.classList.add('tema-oscuro');
+            localStorage.setItem('tema', 'oscuro');
+            temaOscuro.classList.add('seleccionado');
+            temaClaro.classList.remove('seleccionado');
+        });
+    </script>
+</body>
+</html>

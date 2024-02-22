@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardar y Mostrar Nombre de Usuario</title>
+</head>
+<body>
+    <h1>Guardar y Mostrar Nombre de Usuario</h1>
+    <form id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <button onclick="guardar">Guardar</button>
+    </form>
+    <h2>Nombre guardado:</h2>
+    <p id="nombre-guardado">Nombre guardado</p>
+
+    <script>
+        const formulario = document.getElementById('formulario');
+        const nombreInput = document.getElementById('nombre');
+        const nombreGuardado = document.getElementById('nombre-guardado');
+
+        // Comprobar si ya existe un nombre de usuario guardado en localStorage
+        if (localStorage.getItem('nombre')) {
+            nombreGuardado.textContent = `Nombre guardado: ${localStorage.getItem('nombre')}`;
+        } else {
+            nombreGuardado.textContent = 'No hay ningún nombre guardado.';
+        }
+
+        // Guardar el nombre de usuario en localStorage al hacer clic en el botón
+        formulario.addEventListener('submit', (event) => {
+            event.preventDefault();
+            localStorage.setItem('nombre', nombreInput.value);
+            nombreGuardado.textContent = `Nombre guardado: ${nombreInput.value}`;
+        });
+    </script>
+</body>
+</html>
