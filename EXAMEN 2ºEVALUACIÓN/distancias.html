@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Distancias</title>
+</head>
+<body>
+    <h1>Calculadora de Distancias</h1>
+    <label for="distancias"></label>
+    <input type="text" id="distancias">
+    <button onclick="calcular()">Calcular</button>
+
+</body>
+<script>
+const distancias = [];
+distancia1[0]= "distancia1";
+distancia2[1]= "distancia2";
+distancia3[2]= "distancia3";
+function sumar(distancia1, distancia2, distancia3)
+
+{
+let resultado;
+resultado = distancia1 + distancia2 + distancia3;
+return resultado;
+}
+
+document.getElementById("resultado").innerHTML = resultado;
+
+    let inputText = document.getElementById('inputText').value;
+    
+    let arrayCadenas = inputText.split('resultado');
+    
+    let distanciaTotal = 0;
+    
+    for (let i = 0; i < arrayCadenas.length; i++) {
+        let numero = parseFloat(arrayCadenas[i]);
+        
+        if (isNaN(numero)) {
+            alert('Error: El elemento ' + resultado[i] + ' no es un número válido.');
+            return;
+        }
+                resultado += numero;
+    }
+    alert("La distancia total es de:  "+ sumar(distancia1, distancia2, distancia3) );
+}
+
+
+</script>
+</html>

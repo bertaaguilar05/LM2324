@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas</title>
+
+</head>
+<body>
+    <h1>Lista de tareas</h1>
+    <input type="text" id="tarea" placeholder="Escribe tu tarea">
+    <ul id="lista"></ul>
+    <button type="button" onclick="anadirElemento()"> Añade una tarea</button>
+
+    <script>
+        var problemas();
+        function anadirElemento() {
+            var tarea = document.getElementById("tarea").value
+            var lista = document.getElementById("lista");
+            var elemento = document.createElement("li");
+            elemento.textContent = tarea; // Observa en la consola lista y lista.children
+            lista.appendChild(elemento);
+            problemas.push(elemento);
+            var cadena="";
+            for (var i=0; i<problemas.length;i++){
+                cadena = cadena + problemas(i).textContent
+            }
+
+            localStorage.setItem("problemas",cadena);
+        }
+
+    </script>
+    </body>
+</html>

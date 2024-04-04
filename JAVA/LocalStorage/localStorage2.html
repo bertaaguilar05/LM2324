@@ -43,7 +43,7 @@
         temaClaro.addEventListener('click', () => {
             contenido.classList.remove('tema-oscuro');
             contenido.classList.add('tema-claro');
-            localStorage.setItem('tema', 'claro');
+            localStorage.setItem('tema', 'claro');     // Guardar el color del fondo
             temaClaro.classList.add('seleccionado');
             temaOscuro.classList.remove('seleccionado');
         });
@@ -51,7 +51,7 @@
         temaOscuro.addEventListener('click', () => {
             contenido.classList.remove('tema-claro');
             contenido.classList.add('tema-oscuro');
-            localStorage.setItem('tema', 'oscuro');
+            localStorage.setItem('tema', 'oscuro');     // Guardar el color de fondo
             temaOscuro.classList.add('seleccionado');
             temaClaro.classList.remove('seleccionado');
         });
